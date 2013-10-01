@@ -2,11 +2,10 @@ public class PrintPrimes {
   int numberOfPrimes;
   int rowsPerPage;
   int columnsPerPage;
-  int WW;
   int ORDMAX;
   int listOfPrimes[];
 
-  public PrintPrimes(int numberOfPrimes, int rows, int columns, int WW, int ORDMAX) {
+  public PrintPrimes(int numberOfPrimes, int rows, int columns, int ORDMAX) {
     this.numberOfPrimes   = numberOfPrimes;
     this.rowsPerPage  = rows;
     this.columnsPerPage  = columns;
@@ -17,7 +16,7 @@ public class PrintPrimes {
 
 
   public static void main(String[] args) {
-      PrintPrimes printPrimes = new PrintPrimes(300, 50, 4, 10, 30);
+      PrintPrimes printPrimes = new PrintPrimes(300, 50, 4, 30);
       printPrimes.calculatePrimes();
       printPrimes.printPrimes();
   }
