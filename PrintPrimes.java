@@ -1,11 +1,13 @@
-public class PrintPrimes {
+public class PrintPrimes 
+{
   int numberOfPrimes;
   int rowsPerPage;
   int columnsPerPage;
   int ORDMAX;
   int listOfPrimes[];
 
-  public PrintPrimes(int numberOfPrimes, int rows, int columns, int ORDMAX) {
+  public PrintPrimes(int numberOfPrimes, int rows, int columns, int ORDMAX) 
+  {
     this.numberOfPrimes   = numberOfPrimes;
     this.rowsPerPage  = rows;
     this.columnsPerPage  = columns;
@@ -14,7 +16,8 @@ public class PrintPrimes {
   }
 
 
-  public static void main(String[] args) {
+  public static void main(String[] args) 
+  {
       PrintPrimes printPrimes = new PrintPrimes(300, 50, 4, 30);
       printPrimes.calculatePrimes();
       printPrimes.printPrimes();
@@ -30,7 +33,8 @@ public class PrintPrimes {
       calculateOddPrimes();
   }
 
-  private void calculateOddPrimes() {
+  private void calculateOddPrimes() 
+  {
       boolean isPrime;
       int N;
       int MULT[] = new int[ORDMAX + 1];
@@ -39,17 +43,20 @@ public class PrintPrimes {
       int ORD = 2;
       int SQUARE = 9;
 //primesFoundSoFar=1
-      for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) {
+      for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) 
+      {
         do {
           currentNumber = currentNumber + 2;
-          if (currentNumber == SQUARE) {
+          if (currentNumber == SQUARE) 
+          {
             ORD = ORD + 1;
             SQUARE = listOfPrimes[ORD] * listOfPrimes[ORD];
             MULT[ORD - 1] = currentNumber;
           }
           N = 2;
           isPrime = true;
-          while (N < ORD && isPrime) {
+          while (N < ORD && isPrime) 
+          {
             while (MULT[N] < currentNumber)
               MULT[N] = MULT[N] + listOfPrimes[N] + listOfPrimes[N];
             if (MULT[N] == currentNumber)
@@ -61,10 +68,12 @@ public class PrintPrimes {
       }
     }
 
-    public void printPrimes() {
+    public void printPrimes() 
+    {
         int PAGENUMBER = 1;
         int PAGEOFFSET = 1;
-        while (PAGEOFFSET <= numberOfPrimes) {
+        while (PAGEOFFSET <= numberOfPrimes) 
+        {
           System.out.println("The First " + numberOfPrimes +
                                " Prime Numbers --- Page " + PAGENUMBER);
           System.out.println("");
