@@ -23,7 +23,8 @@ public class PrintPrimes
       printPrimes.printPrimes();
   }
 
-  public void calculatePrimes() {
+  public void calculatePrimes() 
+  {
       /* Two is the only even prime. All other prime numbers are odd.
        * To simplify the code, we simply add 2 as a prime number, and
        * delegate the task of finding all odd prime numbers to a helper
@@ -37,7 +38,7 @@ public class PrintPrimes
   {
       boolean isPrime;
       int N;
-      int MULT[] = new int[ORDMAX + 1];
+      int multiples[] = new int[ORDMAX + 1];
 
       int currentNumber = 1;
       int ORD = 2;
@@ -51,15 +52,15 @@ public class PrintPrimes
           {
             ORD = ORD + 1;
             SQUARE = listOfPrimes[ORD] * listOfPrimes[ORD];
-            MULT[ORD - 1] = currentNumber;
+            multiples[ORD - 1] = currentNumber;
           }
           N = 2;
           isPrime = true;
           while (N < ORD && isPrime) 
           {
-            while (MULT[N] < currentNumber)
-              MULT[N] = MULT[N] + listOfPrimes[N] + listOfPrimes[N];
-            if (MULT[N] == currentNumber)
+            while (multiples[N] < currentNumber)
+              multiples[N] = multiples[N] + listOfPrimes[N] + listOfPrimes[N];
+            if (multiples[N] == currentNumber)
               isPrime = false;
             N = N + 1;
           }
