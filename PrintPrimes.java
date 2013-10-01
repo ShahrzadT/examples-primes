@@ -1,15 +1,15 @@
 public class PrintPrimes {
   int numberOfPrimes;
-  int RR;
-  int CC;
+  int rowsPerPage;
+  int columnsPerPage;
   int WW;
   int ORDMAX;
   int listOfPrimes[];
 
-  public PrintPrimes(int numberOfPrimes, int RR, int CC, int WW, int ORDMAX) {
+  public PrintPrimes(int numberOfPrimes, int rows, int columns, int WW, int ORDMAX) {
     this.numberOfPrimes   = numberOfPrimes;
-    this.RR  = RR;
-    this.CC  = CC;
+    this.rowsPerPage  = rows;
+    this.columnsPerPage  = columns;
     this.WW  = WW;
     this.ORDMAX = ORDMAX;
     this.listOfPrimes = new int[numberOfPrimes + 1];
