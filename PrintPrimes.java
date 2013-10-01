@@ -38,8 +38,8 @@ public class PrintPrimes {
       int J = 1;
       int ORD = 2;
       int SQUARE = 9;
-
-      for(int primesFoundSoFar = 1; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) {
+//primesFoundSoFar=1
+      for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) {
         do {
           J = J + 2;
           if (J == SQUARE) {
