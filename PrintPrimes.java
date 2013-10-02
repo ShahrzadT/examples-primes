@@ -50,9 +50,10 @@ public class PrintPrimes
           currentNumber = currentNumber + 2;
           if (currentNumber == SQUARE) 
           {
-            ORD = ORD + 1;
+            multiples[ORD] = currentNumber;
+            ORD++;
             SQUARE = listOfPrimes[ORD] * listOfPrimes[ORD];
-            multiples[ORD - 1] = currentNumber;
+            
           }
           N = 2;
           isPrime = true;
