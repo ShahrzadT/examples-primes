@@ -36,6 +36,7 @@ public class PrintPrimes
       listOfPrimes[1] = 2;
       calculateOddPrimes();
   }
+  
 
   private void calculateOddPrimes() 
   {
@@ -45,17 +46,17 @@ public class PrintPrimes
 
       int currentNumber = 1;
       int ORD = 2;
-      int SQUARE = 9;
+      int firstOddSquare = 9;
 //primesFoundSoFar=1
       for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) 
       {
         do {
           currentNumber = currentNumber + 2;
-          if (currentNumber == SQUARE) 
+          if (currentNumber == firstOddSquare) 
           {
             multiples[ORD] = currentNumber;
             ORD++;
-            SQUARE = listOfPrimes[ORD] * listOfPrimes[ORD];
+            firstOddSquare = listOfPrimes[ORD] * listOfPrimes[ORD];
             
           }
           N = 2;
