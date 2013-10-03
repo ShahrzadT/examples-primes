@@ -8,6 +8,7 @@ public class PrintPrimes
 //hfsdjdfhjdfkhsd
   //WTF
   //i hope this works
+  //so it works?
   public PrintPrimes(int numberOfPrimes, int rows, int columns, int ORDMAX) 
   {
     this.numberOfPrimes   = numberOfPrimes;
