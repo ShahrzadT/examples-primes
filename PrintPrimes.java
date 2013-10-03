@@ -6,6 +6,7 @@ public class PrintPrimes
   int ORDMAX;
   int listOfPrimes[];
 //hfsdjdfhjdfkhsd
+  //WTF
   //i hope this works
   public PrintPrimes(int numberOfPrimes, int rows, int columns, int ORDMAX) 
   {
