@@ -5,10 +5,7 @@ public class PrintPrimes
   int columnsPerPage;
   int ORDMAX;
   int listOfPrimes[];
-//hfsdjdfhjdfkhsd
-  //WTF
-  //i hope this works
-  //so it works?
+
   public PrintPrimes(int numberOfPrimes, int rows, int columns, int ORDMAX) 
   {
     this.numberOfPrimes   = numberOfPrimes;
