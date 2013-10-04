@@ -47,6 +47,7 @@ public class PrintPrimes
       int currentNumber = 1;
       int ORD = 2;
       int firstOddSquare = 9;
+      //first odd square
 //primesFoundSoFar=1
       for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) 
       {
