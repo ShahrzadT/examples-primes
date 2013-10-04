@@ -50,7 +50,8 @@ public class PrintPrimes
 
       for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) 
       {
-        do {
+        do 
+        {
           currentNumber = currentNumber + 2;
           if (currentNumber == firstOddSquare) 
           {
@@ -83,10 +84,13 @@ public class PrintPrimes
           System.out.println("The First " + numberOfPrimes +
                                " Prime Numbers --- Page " + pageNumber);
           System.out.println("");
-          for (int rowOffset = pageOffset; rowOffset < pageOffset + rowsPerPage; rowOffset++){
+          for (int rowOffset = pageOffset; rowOffset < pageOffset + rowsPerPage; rowOffset++)
+          {
             for (int columnCounter = 0; columnCounter < columnsPerPage;columnCounter++)
+            {
               if (rowOffset + columnCounter * rowsPerPage <= numberOfPrimes)
                 System.out.format("%10d", listOfPrimes[rowOffset + columnCounter * rowsPerPage]);
+            }
             System.out.println("");
           }
           System.out.println("\f");
