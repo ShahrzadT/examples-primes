@@ -47,8 +47,7 @@ public class PrintPrimes
       int currentNumber = 1;
       int ORD = 2;
       int firstOddSquare = 9;
-      //first odd square
-//primesFoundSoFar=1
+
       for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) 
       {
         do {
@@ -77,22 +76,22 @@ public class PrintPrimes
 
     public void printPrimes() 
     {
-        int PAGENUMBER = 1;
-        int PAGEOFFSET = 1;
-        while (PAGEOFFSET <= numberOfPrimes) 
+        int pageNumber = 1;
+        int pageOffset = 1;
+        while (pageOffset <= numberOfPrimes) 
         {
           System.out.println("The First " + numberOfPrimes +
-                               " Prime Numbers --- Page " + PAGENUMBER);
+                               " Prime Numbers --- Page " + pageNumber);
           System.out.println("");
-          for (int ROWOFFSET = PAGEOFFSET; ROWOFFSET < PAGEOFFSET + rowsPerPage; ROWOFFSET++){
+          for (int rowOffset = pageOffset; rowOffset < pageOffset + rowsPerPage; rowOffset++){
             for (int columnCounter = 0; columnCounter < columnsPerPage;columnCounter++)
-              if (ROWOFFSET + columnCounter * rowsPerPage <= numberOfPrimes)
-                System.out.format("%10d", listOfPrimes[ROWOFFSET + columnCounter * rowsPerPage]);
+              if (rowOffset + columnCounter * rowsPerPage <= numberOfPrimes)
+                System.out.format("%10d", listOfPrimes[rowOffset + columnCounter * rowsPerPage]);
             System.out.println("");
           }
           System.out.println("\f");
-          PAGENUMBER = PAGENUMBER + 1;
-          PAGEOFFSET = PAGEOFFSET + rowsPerPage * columnsPerPage;
+          pageNumber = pageNumber + 1;
+          pageOffset = pageOffset + rowsPerPage * columnsPerPage;
         }
     }
 }
