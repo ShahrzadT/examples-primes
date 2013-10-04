@@ -3,15 +3,15 @@ public class PrintPrimes
   int numberOfPrimes;
   int rowsPerPage;
   int columnsPerPage;
-  int ORDMAX;
+  int ordMax;
   int listOfPrimes[];
 
-  public PrintPrimes(int numberOfPrimes, int rows, int columns, int ORDMAX) 
+  public PrintPrimes(int numberOfPrimes, int rows, int columns, int ordMax) 
   {
     this.numberOfPrimes   = numberOfPrimes;
     this.rowsPerPage  = rows;
     this.columnsPerPage  = columns;
-    this.ORDMAX = ORDMAX;
+    this.ordMax = ordMax;
     this.listOfPrimes = new int[numberOfPrimes + 1];
   }
 
@@ -39,7 +39,7 @@ public class PrintPrimes
   {
       boolean isPrime;
       int index;
-      int multiples[] = new int[ORDMAX + 1];
+      int multiples[] = new int[ordMax + 1];
 
       int currentNumber = 1;
       int currentPrimeIndex = 2;
