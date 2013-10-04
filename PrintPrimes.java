@@ -41,11 +41,11 @@ public class PrintPrimes
   private void calculateOddPrimes() 
   {
       boolean isPrime;
-      int N;
+      int index;
       int multiples[] = new int[ORDMAX + 1];
 
       int currentNumber = 1;
-      int ORD = 2;
+      int currentPrimeIndex = 2;
       int firstOddSquare = 9;
 
       for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) 
@@ -54,20 +54,20 @@ public class PrintPrimes
           currentNumber = currentNumber + 2;
           if (currentNumber == firstOddSquare) 
           {
-            multiples[ORD] = currentNumber;
-            ORD++;
-            firstOddSquare = listOfPrimes[ORD] * listOfPrimes[ORD];
+            multiples[currentPrimeIndex] = currentNumber;
+            currentPrimeIndex++;
+            firstOddSquare = listOfPrimes[currentPrimeIndex] * listOfPrimes[currentPrimeIndex];
             
           }
-          N = 2;
+          index = 2;
           isPrime = true;
-          while (N < ORD && isPrime) 
+          while (index < currentPrimeIndex && isPrime) 
           {
-            while (multiples[N] < currentNumber)
-              multiples[N] = multiples[N] + listOfPrimes[N] + listOfPrimes[N];
-            if (multiples[N] == currentNumber)
+            while (multiples[index] < currentNumber)
+              multiples[index] = multiples[index] + listOfPrimes[index] + listOfPrimes[index];
+            if (multiples[index] == currentNumber)
               isPrime = false;
-            N = N + 1;
+            index = index + 1;
           }
         } while (!isPrime);
         listOfPrimes[primesFoundSoFar] = currentNumber;
